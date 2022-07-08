@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Navbar from "../../components/Navbar";
 import { projectsData } from "../../utils/projectsData";
-
+import Head from "next/head";
 function id() {
   const router = useRouter();
   let { id } = router.query;
@@ -31,7 +31,63 @@ function id() {
       className="min-h-screen bg-base-100 overflow-hidden text-base-content"
       data-theme={"aqua"}
     >
-      {" "}
+      <Head>
+        <title>CleverDevs</title>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Poppins"
+          rel="stylesheet"
+        />
+        <meta
+          name="description"
+          content="This is the official website for the Cleverdevs. The Cleverdevs are a group of talented freelance developers."
+        />
+
+        <meta property="og:url" content="https://clever-base.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="CleverBase" />
+        <meta
+          property="og:description"
+          content="This is the official website for the Cleverdevs. The Cleverdevs are a group of talented freelance developers."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dubinx/image/upload/v1657322192/Screenshot_2022-07-09_000251_jkdj3h.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="clever-base.vercel.app" />
+        <meta
+          property="twitter:url"
+          content="https://clever-base.vercel.app/"
+        />
+        <meta name="twitter:title" content="CleverBase" />
+        <meta
+          name="twitter:description"
+          content="This is the official website for the Cleverdevs. The Cleverdevs are a group of talented freelance developers."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dubinx/image/upload/v1657322192/Screenshot_2022-07-09_000251_jkdj3h.jpg"
+        />
+      </Head>{" "}
       <Navbar projectId={id} />
       <div className="relative h-[60vh] mb-10">
         <Carousel
